@@ -10,3 +10,14 @@ Use of
 - [chrome extension](http://golang.org/misc/chrome/gophertool)
 - [bash completion](http://golang.org/misc/bash/go)
 
+For VI
+- [official golang vim](http://golang.org/misc/vim/)
+- [useful golang article](http://golang.org/misc/vim/)
+- [useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang)
+- [gocode](https://github.com/nsf/gocode)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
+- [tagbar](http://majutsushi.github.io/tagbar/)
+
+TODO 
+- https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins
+
