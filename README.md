@@ -15,7 +15,7 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 - [Gocode](https://github.com/nsf/gocode)
 - [Pathogen](https://github.com/tpope/vim-pathogen)
 - [Sensible](https://github.com/tpope/vim-sensible)
-- [Syntatic](https://github.com/scrooloose/syntastic)
+- [Syntastic](https://github.com/scrooloose/syntastic)
 - [Nerdtree](https://github.com/scrooloose/nerdtree)
 - [Tagbar](http://majutsushi.github.io/tagbar/) avec dep [Exuberant Ctags](http://ctags.sourceforge.net/) (./configure, make)
 - [Gotags](https://github.com/jstemmer/gotags) for Tagbar
