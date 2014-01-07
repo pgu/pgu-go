@@ -19,6 +19,8 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 - [Nerdtree](https://github.com/scrooloose/nerdtree)
 - [Tagbar](http://majutsushi.github.io/tagbar/) avec dep [Exuberant Ctags](http://ctags.sourceforge.net/) (./configure, make)
 - [Gotags](https://github.com/jstemmer/gotags) for Tagbar
+- [Vim compiler Go](https://github.com/rjohnsondev/vim-compiler-go)
+- [Vim godef](https://github.com/dgryski/vim-godef) with [godef](https://code.google.com/p/rog-go/source/browse/exp/cmd/godef/)
 
 [Useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang) :fr:
 
