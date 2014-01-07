@@ -10,14 +10,17 @@ Use of
 - [chrome extension](http://golang.org/misc/chrome/gophertool)
 - [bash completion](http://golang.org/misc/bash/go)
 
-For VI
-- [official golang vim](http://golang.org/misc/vim/)
-- [useful golang article](http://golang.org/misc/vim/)
-- [useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang)
-- [gocode](https://github.com/nsf/gocode)
-- [nerdtree](https://github.com/scrooloose/nerdtree)
-- [tagbar](http://majutsushi.github.io/tagbar/)
+For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
+- [Official golang vim](http://golang.org/misc/vim/)
+- [Gocode](https://github.com/nsf/gocode)
+- [Pathogen](https://github.com/tpope/vim-pathogen)
+- [Sensible](https://github.com/tpope/vim-sensible)
+- [Syntatic](https://github.com/scrooloose/syntastic)
+- [Nerdtree](https://github.com/scrooloose/nerdtree)
+- [Tagbar](http://majutsushi.github.io/tagbar/) avec dep [Exuberant Ctags](http://ctags.sourceforge.net/) (./configure, make)
+- [Gotags](https://github.com/jstemmer/gotags) for Tagbar
 
-TODO 
-- https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins
+[Useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang) :fr:
+
+
 
