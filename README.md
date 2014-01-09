@@ -25,7 +25,7 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 [Useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang) :fr:
 
 :heavy_exclamation_mark: **Integration with the app engine SDK**
-- Add links to the SDK, it fixes the vim compiler go
+- Add links to the SDK, it fixes the **vim compiler go**
 
 ```
 ln -s $APPENGINE_SDK/goroot/src/pkg/appengine $GOROOT/src/pkg/
@@ -34,7 +34,7 @@ mkdir -p $GOROOT/src/pkg/code.google.com/p/
 ln -s $APPENGINE_SDK/goroot/src/pkg/code.google.com/p/goprotobuf $GOROOT/src/pkg/code.google.com/p/
 ```
 
-- Update gocode lib, it fixes the autocompletion on appengine packages
+- Update **gocode** lib, it fixes the autocompletion for appengine packages
 
 ```
 gocode set lib-path "$APPENGINE_SDK/goroot/pkg/linux_amd64_appengine"
