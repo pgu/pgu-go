@@ -44,3 +44,15 @@ Useful links about this topic: [1](http://stackoverflow.com/questions/21012037/g
 
 :satisfied:
 
+----
+
+### More Resources
+
+Useful links about Golang + [AngularJS](http://angularjs.org/) + AppEngine
+
+- Francesc Campoy Flores Demo
+ - [video](http://pivotallabs.com/francesc-flores-go-language/)
+ - [slides](http://go-talks.appspot.com/github.com/campoy/todo/talk/talk.slide#1)
+ - [code](https://github.com/campoy/todo)
+
+
