@@ -1,6 +1,7 @@
-package hello
+package server
 
 import (
+	"encoding/json"
 	"html/template"
 	"net/http"
 	"time"
@@ -19,6 +20,12 @@ type Greeting struct {
 func init() {
 	http.HandleFunc("/", root)
 	http.HandleFunc("/sign", sign)
+	http.HandleFunc("/tasks/", handleTasks) // in a future, let's use github.com/gorilla/mux
+}
+
+func handleTasks(w http.ResponseWriter, r *http.Request) {
+	tasks := []string{"task 1", "task 2", "task 3", "task 4"}
+	json.NewEncoder(w).Encode(tasks)
 }
 
 // guestbookKey returns the key used for all guestbook entries.
