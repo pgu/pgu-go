@@ -40,7 +40,7 @@ ln -s $APPENGINE_SDK/goroot/src/pkg/code.google.com/p/goprotobuf $GOROOT/src/pkg
 gocode set lib-path "$APPENGINE_SDK/goroot/pkg/linux_amd64_appengine"
 ```
 
-Useful links on this topic: [1](http://stackoverflow.com/questions/21012037/go-cannot-find-package-appengine) [2](https://stackoverflow.com/questions/11286534/test-cases-for-go-and-appengine)
+Useful links about this topic: [1](http://stackoverflow.com/questions/21012037/go-cannot-find-package-appengine) [2](https://stackoverflow.com/questions/11286534/test-cases-for-go-and-appengine)
 
 :satisfied:
 
