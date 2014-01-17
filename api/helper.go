@@ -21,7 +21,7 @@ type BasicAuth struct {
 }
 
 func requireAuth(w http.ResponseWriter, err error) {
-	w.Header().Set("WWW-Authenticate", "Basic realm=\"NextTv-VLC-API\"")
+	w.Header().Set("WWW-Authenticate", "Basic realm=\"Pgu-go-API\"")
 	http.Error(w, http.StatusText(http.StatusUnauthorized), http.StatusUnauthorized)
 
 	if err != nil {
