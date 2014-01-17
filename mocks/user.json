@@ -1,0 +1,27 @@
+{
+    "id": "1",
+    "image": "http://placekitten.com/32/32",
+    "name": "Fake User",
+    "watchList": [
+        {
+            "title": "Despicable Me 2",
+            "image": "",
+            "watched": "false"
+        },
+        {
+            "title": "The Hobbit",
+            "image": "",
+            "watched": "true"
+        },
+        {
+            "title": "Sherlock S01ep03",
+            "image": "",
+            "watched": "false"
+        },
+        {
+            "title": "2 Broke Girls S03e04",
+            "image": "",
+            "watched": "false"
+        }
+    ]
+}
