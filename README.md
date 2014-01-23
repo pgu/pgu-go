@@ -15,7 +15,7 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 - [Official golang vim](http://golang.org/misc/vim/)
 - [Gocode](https://github.com/nsf/gocode)
 - [Pathogen](https://github.com/tpope/vim-pathogen)
-- [Sensible](https://github.com/tpope/vim-sensible)
+- [Sensible](https://github.com/pgu/vim-sensible)
 - [Syntastic](https://github.com/scrooloose/syntastic)
 - [Nerdtree](https://github.com/scrooloose/nerdtree)
 - [Tagbar](http://majutsushi.github.io/tagbar/) avec dep [Exuberant Ctags](http://ctags.sourceforge.net/) (./configure, make)
@@ -56,4 +56,13 @@ Useful links about Golang + [AngularJS](http://angularjs.org/) + AppEngine
  - [slides](http://go-talks.appspot.com/github.com/campoy/todo/talk/talk.slide#1)
  - [code](https://github.com/campoy/todo)
 
+
+### More VI
+
+- [surround](https://github.com/tpope/vim-surround)
+- [repeat](https://github.com/tpope/vim-repeat)
+- [fugitive](https://github.com/tpope/vim-fugitive)
+
+
+to review [1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
 
