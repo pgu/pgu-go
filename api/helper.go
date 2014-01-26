@@ -102,6 +102,16 @@ func wrapJsonHandler(f func(w http.ResponseWriter, r *http.Request) error) http.
 			}
 		*/
 
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Accept")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, PUT, DELETE")
+		w.Header().Set("Access-Control-Expose-Headers", "Location")
+
+		if r.Method == "OPTIONS" {
+			//			fmt.Fprint(w, "")
+			return
+		}
+
 		// - setup response
 		w.Header().Set("Content-Type", "application/json")
 
