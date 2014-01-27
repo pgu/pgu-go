@@ -1,0 +1,124 @@
+<!doctype html>
+<html ng-app="PguGo">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Golang and AngularJS on AppEngine">
+    <meta name="author" content="PGU">
+    <link rel="canonical" href="http://pgu-go.appspot.com/" />
+
+    <title>Pgu-go</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lobster&text=Mangeyourtsk' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="/cors/jumbotron-narrow.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container" ng-controller="TasksCtrl">
+
+    <div ng-if="displayUI">
+
+        <div class="header">
+            <h3 class="text-muted">Pgu-go API TEST CORS</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1 style="font-family: 'Lobster', cursive;">Manage your tasks</h1>
+
+            <p class="lead">Test GET, POST, PUT and DELETE with the tasks API</p>
+
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Add a new task here" ng-model="newTask.Title">
+                </div>
+                <button class="btn btn-lg btn-primary" ng-click="addTask()" ng-disabled="!newTask.Title || isWorkingCreation">New Task</button>
+            </form>
+        </div>
+
+        <div class="row marketing">
+            <div ng-repeat="task in tasks | orderBy:tasksSort">
+                <button
+                    type="button"
+                    ng-init="task_css='btn btn-lg btn-block btn-'"
+                    ng-class="task_css + ({normal:'default', warning:'warning', asap:'danger', success: 'success' }[task.Done ? 'success': task.Priority])"
+                    ng-disabled="editionTask"
+                    ng-click="editTask(task)">
+                    {{ task.Title }}
+                </button>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row marketing" ng-show="editionTask">
+            <div class="well well-lg">
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="inputID">ID</label>
+                        <span id="inputID"><strong>{{ editionTask.ID }}</strong></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTitle">Title</label>
+                        <input id="inputTitle" type="text" class="form-control" placeholder="Title" ng-model="editionTask.Title">
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="editionTask.Done"> Done
+                        </label>
+                    </div>
+
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="editionTask.Priority" ng-disabled="editionTask.Done" value="normal">Normal
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="editionTask.Priority" ng-disabled="editionTask.Done" value="warning">Warning
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="editionTask.Priority" ng-disabled="editionTask.Done" value="asap">ASAP
+                        </label>
+                    </div>
+
+                    <p></p>
+
+                    <p class="text-right">
+                        <button class="btn btn-lg btn-danger" ng-click="deleteTask()" ng-disabled="isWorkingEdition">Delete Task</button>
+                        <button class="btn btn-lg btn-default" ng-click="cancelEdition()" ng-disabled="isWorkingEdition">Cancel</button>
+                        <button class="btn btn-lg btn-primary" ng-click="updateTask()" ng-disabled="isWorkingEdition">Update Task</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/cors/tasksCtrl.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-40453297-15', 'pgu-go.appspot.com');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>

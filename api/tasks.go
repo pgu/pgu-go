@@ -16,10 +16,10 @@ const TasksPrefix = "/tasks/"
 
 func addApiTasks(r *mux.Router) {
 	r.HandleFunc(TasksPrefix, wrapJsonHandler(ListTasks)).Methods("GET")
-	r.HandleFunc(TasksPrefix, wrapJsonHandler(NewTask)).Methods("POST")
+	r.HandleFunc(TasksPrefix, wrapJsonHandler(NewTask)).Methods("POST", "OPTIONS")
 	r.HandleFunc(TasksPrefix+"{id}", wrapJsonHandler(GetTask)).Methods("GET")
 	r.HandleFunc(TasksPrefix+"{id}", wrapJsonHandler(UpdateTask)).Methods("PUT")
-	r.HandleFunc(TasksPrefix+"{id}", wrapJsonHandler(DeleteTask)).Methods("DELETE")
+	r.HandleFunc(TasksPrefix+"{id}", wrapJsonHandler(DeleteTask)).Methods("DELETE", "OPTIONS")
 }
 
 type TaskPriority string

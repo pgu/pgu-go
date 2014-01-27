@@ -2,11 +2,13 @@
 
 angular.module('PguGo', [])
 
-    .run(function ($http) {
+    .run(function($http) {
         $http.defaults.headers.common.Authorization = 'Basic cGd1Omdv';
     })
 
     .controller('TasksCtrl', function ($scope, $http) {
+
+        var url = 'http://localhost:8080/tasks/';
 
         $scope.displayUI = false;
 
@@ -21,7 +23,7 @@ angular.module('PguGo', [])
         $scope.editionTask = null;
 
         function fetchTasks() {
-            return $http.get('/tasks/').then(function (response) {
+            return $http.get(url).then(function (response) {
 
                 $scope.tasks = response.data;
                 $scope.displayUI = true;
@@ -52,20 +54,21 @@ angular.module('PguGo', [])
                 }
             }
 
-            return prefix + task.Title;
+            return prefix + task.Title.toLowerCase();
         };
 
         $scope.addTask = function () {
 
             $scope.isWorkingCreation = true;
 
-            $http.post('/tasks/', $scope.newTask)
+            $http.post(url, $scope.newTask)
 
                 .then(function (response) {
 
                     var pathToNewTask = response.headers().location;
-                    return $http.get(pathToNewTask).then(function (response) {
+                    var id = _.last(pathToNewTask.split('/'));
 
+                    return $http.get(url + id).then(function (response) {
                         $scope.tasks.push(response.data);
                     });
 
@@ -96,7 +99,7 @@ angular.module('PguGo', [])
         $scope.updateTask = function () {
             $scope.isWorkingEdition = true;
 
-            $http.put('/tasks/' + $scope.editionTask.ID, $scope.editionTask)
+            $http.put(url + $scope.editionTask.ID, $scope.editionTask)
 
                 .then(function () {
                     theTask.Title = $scope.editionTask.Title;
@@ -113,7 +116,7 @@ angular.module('PguGo', [])
         $scope.deleteTask = function () {
             $scope.isWorkingEdition = true;
 
-            $http.delete('/tasks/' + $scope.editionTask.ID)
+            $http.delete(url + $scope.editionTask.ID)
 
                 .then(function () {
                     $scope.tasks = _.reject($scope.tasks, function (task) {

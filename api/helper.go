@@ -62,7 +62,7 @@ func handleBasicAuth(w http.ResponseWriter, r *http.Request) bool {
 	credentials := &BasicAuth{Username: credentials_parts[0], Password: credentials_parts[1]}
 	log.Println("Credentials ", credentials)
 
-	if credentials.Username != "mickey" || credentials.Password != "mouse" {
+	if credentials.Username != "pgu" || credentials.Password != "go" {
 		requireAuth(w, errors.New("wrong credentials"))
 		return false
 	}
@@ -73,34 +73,24 @@ func handleBasicAuth(w http.ResponseWriter, r *http.Request) bool {
 func wrapJsonHandler(f func(w http.ResponseWriter, r *http.Request) error) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
-		/*
-			referer := r.Referer()
-			front_origin := ""
-
-			if strings.Contains(referer, "localhost:9000") || strings.Contains(referer, "127.0.0.1:9000") {
-				front_origin = strings.TrimSuffix(referer, "/")
-			}
-
-			w.Header().Set("Access-Control-Allow-Origin", front_origin)
-			w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-			w.Header().Set("Access-Control-Allow-Headers", "Authorization")
-
-			if r.Method == "OPTIONS" {
-				fmt.Fprint(w, "")
-				return
-			}
-		*/
-
 		//
 		// PRE OPS:
 
+		// - CORS
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Accept, Authorization")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, PUT, DELETE")
+		w.Header().Set("Access-Control-Expose-Headers", "Location")
+
+		if r.Method == "OPTIONS" {
+			return
+		}
+
 		// - basic authentication
-		/*
-			ok := handleBasicAuth(w, r)
-			if !ok {
-				return
-			}
-		*/
+		ok := handleBasicAuth(w, r)
+		if !ok {
+			return
+		}
 
 		// - setup response
 		w.Header().Set("Content-Type", "application/json")
