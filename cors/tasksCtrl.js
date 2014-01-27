@@ -2,6 +2,10 @@
 
 angular.module('PguGo', [])
 
+    .run(function($http) {
+        $http.defaults.headers.common.Authorization = 'Basic cGd1Omdv';
+    })
+
     .controller('TasksCtrl', function ($scope, $http) {
 
         var url = 'http://localhost:8080/tasks/';
@@ -50,7 +54,7 @@ angular.module('PguGo', [])
                 }
             }
 
-            return prefix + task.Title;
+            return prefix + task.Title.toLowerCase();
         };
 
         $scope.addTask = function () {
