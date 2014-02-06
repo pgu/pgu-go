@@ -68,7 +68,10 @@ Useful links about Golang + [AngularJS](http://angularjs.org/) + AppEngine
 - [CSS3](https://github.com/hail2u/vim-css3-syntax.git)
 
 
-**TODO** to review [1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
+**TODO** to review 
+[1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
+[2](https://github.com/holman/dotfiles)
+[3](https://github.com/mathiasbynens/dotfiles)
 
 ### Sublime
 - [Sublime Text 2.0.2](http://www.sublimetext.com/)
