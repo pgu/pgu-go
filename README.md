@@ -22,6 +22,7 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 - [Gotags](https://github.com/jstemmer/gotags) for Tagbar
 - [Vim compiler Go](https://github.com/rjohnsondev/vim-compiler-go)
 - [Vim godef](https://github.com/dgryski/vim-godef) with [godef](https://code.google.com/p/rog-go/source/browse/exp/cmd/godef/)
+- [Goimports](http://godoc.org/code.google.com/p/go.tools/cmd/goimports)
 
 [Useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang) :fr:
 
@@ -64,5 +65,13 @@ Useful links about Golang + [AngularJS](http://angularjs.org/) + AppEngine
 - [fugitive](https://github.com/tpope/vim-fugitive)
 
 
-to review [1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
+**TODO** to review [1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
+
+### Sublime
+- [Sublime Text 2.0.2](http://www.sublimetext.com/)
+- [GoSublime](https://github.com/DisposaBoy/GoSublime)
+- [GoImports](https://michaelwhatcott.com/gosublime-goimports/)
+
+
+
 
