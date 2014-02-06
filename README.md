@@ -64,6 +64,7 @@ Useful links about Golang + [AngularJS](http://angularjs.org/) + AppEngine
 - [repeat](https://github.com/tpope/vim-repeat)
 - [fugitive](https://github.com/tpope/vim-fugitive)
 - [Gundo](http://sjl.bitbucket.org/gundo.vim/)
+- [CSS3](https://github.com/hail2u/vim-css3-syntax.git)
 
 
 **TODO** to review [1](http://askubuntu.com/questions/123392/how-can-i-customize-vim-for-web-development-and-programming) 
