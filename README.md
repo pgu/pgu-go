@@ -23,6 +23,7 @@ For [VI](https://code.google.com/p/go-wiki/wiki/IDEsAndTextEditorPlugins)
 - [Vim compiler Go](https://github.com/rjohnsondev/vim-compiler-go)
 - [Vim godef](https://github.com/dgryski/vim-godef) with [godef](https://code.google.com/p/rog-go/source/browse/exp/cmd/godef/)
 - [Goimports](http://godoc.org/code.google.com/p/go.tools/cmd/goimports)
+- [Golint](https://github.com/golang/lint)
 
 [Useful metal3d article](http://www.metal3d.org/ticket/2013/07/07/vim-for-golang) :fr:
 
